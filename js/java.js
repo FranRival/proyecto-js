@@ -109,3 +109,31 @@ console.log(x,y,z,a,b,c);
 
  panes.push('🍔')
  console.log(panes, + 'espacio' +copiaDePanes) //mismo objeto, variables diferentes. 
+
+
+ //tipo de dato ocomplejo, paso por referencia. 
+
+ let frutamon = {
+    naranjada: '🍊'
+
+ }
+
+ let vegetales = frutamon
+
+vegetales.naranjada = '🌵'
+console.log(frutamon);
+
+
+let ropa ={
+    blusa:'👘'
+}
+
+ropa.pantalon = '👓' //agrega nueva variable. 
+console.log(ropa);
+
+//el detail, es que el resultado en consola, es que me sale el emoji: 👘 👓. juntos
+
+//ya no puedo acceder solo al resultado de ropa, 👘
+
+//el garbage collection: lo que hace js, ya no usemos la referncia anterior, y la bota. 
+//el resultado anterior, ya no existe. 
