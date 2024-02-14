@@ -67,3 +67,45 @@ cambiarNombre(persona) //para que aparezca el resultado 'nuevo nombre, se debe i
 
 
 console.log(persona)
+
+
+
+//PSO POR VALOR Y PASO POR REFERENCIA
+/* primitivos 
+inmutabes, se pasan por un valor
+
+
+complejos, se pasan por valor */
+
+let x = 1
+let y = 'helloo'
+let z = null
+
+let a = x
+let b = y
+let c = z
+
+//creando variables y asignando valor de otras que ya tenemos
+
+console.log(x,y,z,a,b,c);
+
+ a = 23
+ b = 'fdvf'
+ c = undefined
+
+ //paso por referencia
+
+ let fruterio = ['manzana']
+
+ //agregar un valor a un array, para eso es el push. modifica el valor. 
+
+ fruterio.push('toronja')
+ console.log(fruterio)
+
+
+ let panes = ['🍞','🥨','🥞']
+ let copiaDePanes = panes[2]
+ console.log(copiaDePanes); //me saca todos los objetos del array
+
+ panes.push('🍔')
+ console.log(panes, + 'espacio' +copiaDePanes) //mismo objeto, variables diferentes. 
