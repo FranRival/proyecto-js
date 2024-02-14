@@ -45,3 +45,61 @@ const hobbit3 = '🛵'
 const hobbies = 'Mis hobbies son: '.concat(hobbit1,', ',hobbit2, ', ', hobbit3, '. ')
 
 console.log(hobbies);
+
+
+
+///catacteres de escape
+
+//const whatDoiD = 'Im software engineer' 
+
+const whatDoiD = 'Im software engineer' 
+
+//escape alternativo
+
+const escapeAlternativo= "I'm software engineer"
+
+//2. barra invertida
+
+const barraInvertida = 'I\'m software engineer'
+
+//3. template literal 
+
+const escapeComillaINvertida = `I'm software engineer`
+
+//escritura de string largos
+
+
+/* 
+Las rosas son rojas,
+Las violetas azules,
+caracter inesperado, 
+en la linea 86
+
+*/
+
+const poema = 'Las rosas son rojas, \n' +
+             'Las violetas azules, \n' +
+             'caracter inesperado, \n' +
+             'en la linea 86'
+
+
+console.log(poema)
+
+const poema2 = 'Las rosas son rojas,\n\
+Las violetas azules,\n\
+caracter inesperado,\n\
+en la linea 86.'
+console.log(poema2);
+
+
+
+//e=string con templaete literal
+
+
+const poema3 = `Las rosas son rojas,
+Las violetas azules,
+caracter inesperado,
+en la linea 86.`
+
+console.log(poema3);
+
