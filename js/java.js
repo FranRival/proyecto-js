@@ -1,139 +1,47 @@
 console.log("hello world")
 
 
+//creacion de string
 
-//anatomia de variables
-let variable = "numeros"
-
-//let es una caja, donde se almacenara. se almacena algo en la variable. la declaracion, y la asignacion, luego del =
-
-console.log(variable);
-
-const variableDos = 0 //el costs es para una caja que no cambiara alv. son fijas. el valor siempre sera el mismo. 
-
-//tipos de datos; mutables e inmutables. 
-//10 tipos de datos: 
+const primeraOpcion = 'llaves'
+const segundaOpcion = "llaves"
+const terceraOpcion = `llaves` //templates literarios
 
 
-/* primitivos 
-String
-Number
-Boolean
-null
-undefined
-Symbol
-BigInt
----inmutables, se pasan por un valor.
+//concatenar
+
+const direccion = "calle falsa 1, 2, 3"
+const ciudad = "springfield"
+const direccionCompleta = "mi direccion complta es " + direccion + " " + ciudad
+
+console.log(direccionCompleta)
 
 
-complejos
-Object
-Array
-function 
-------mutables. se pasan por referencia. 
+//concatenacion templates literarios 
+
+const nombre = "Homero"
+const pais = "🏴‍☠️"
+const presentacion = `Hola, soy ${nombre}, vengo de ${pais}`
+console.log(presentacion);
+
+//3era concatenacion. join()
+
+const primeraParte = 'Me gusta'
+const segundaParte = 'la gente de '
+const terceraParte = '🛸'
+
+const pensamiento = [primeraParte,segundaParte,terceraParte]
+console.log(pensamiento.join(' ')) //el join se puede personalizar
+
+console.log(pensamiento.join(' 🌧 ')) //el join se puede personalizar
 
 
-*/
+//cuarta forma de concatenar string. concat
 
-let numero = 23
-numero = numero + 10
-console.log(numero);
+const hobbit1 = '🧺'
+const hobbit2 = '♨'
+const hobbit3 = '🛵'
 
-let verdadero = true
-verdadero = false
-console.log(verdadero);
+const hobbies = 'Mis hobbies son: '.concat(hobbit1,', ',hobbit2, ', ', hobbit3, '. ')
 
-
-//tipo de dato, mutable
-let usuario = {nombre: "personaje", edad:15}
-
-usuario.edad =20
-console.log(usuario)
-
-
-let frutas = ['manzanas', 'pera'] 
-frutas[0] = 'sandia'
-console.log(frutas);
-
-
-
-function cambiarNombre (objeto){
-    objeto.nombre = 'Nuevo nombre' //ese .nombre, de donde lo toma?
-}
-
-let persona =  {nombre:'random'}
-
-cambiarNombre(persona) //para que aparezca el resultado 'nuevo nombre, se debe invocar a la funcion, para que cambie el nombre. '
-
-
-console.log(persona)
-
-
-
-//PSO POR VALOR Y PASO POR REFERENCIA
-/* primitivos 
-inmutabes, se pasan por un valor
-
-
-complejos, se pasan por valor */
-
-let x = 1
-let y = 'helloo'
-let z = null
-
-let a = x
-let b = y
-let c = z
-
-//creando variables y asignando valor de otras que ya tenemos
-
-console.log(x,y,z,a,b,c);
-
- a = 23
- b = 'fdvf'
- c = undefined
-
- //paso por referencia
-
- let fruterio = ['manzana']
-
- //agregar un valor a un array, para eso es el push. modifica el valor. 
-
- fruterio.push('toronja')
- console.log(fruterio)
-
-
- let panes = ['🍞','🥨','🥞']
- let copiaDePanes = panes[2]
- console.log(copiaDePanes); //me saca todos los objetos del array
-
- panes.push('🍔')
- console.log(panes, + 'espacio' +copiaDePanes) //mismo objeto, variables diferentes. 
-
-
- //tipo de dato ocomplejo, paso por referencia. 
-
- let frutamon = {
-    naranjada: '🍊'
-
- }
-
- let vegetales = frutamon
-
-vegetales.naranjada = '🌵'
-console.log(frutamon);
-
-
-let ropa ={
-    blusa:'👘'
-}
-
-ropa.pantalon = '👓' //agrega nueva variable. 
-console.log(ropa);
-
-//el detail, es que el resultado en consola, es que me sale el emoji: 👘 👓. juntos
-
-//ya no puedo acceder solo al resultado de ropa, 👘
-
-//el garbage collection: lo que hace js, ya no usemos la referncia anterior, y la bota. 
-//el resultado anterior, ya no existe. 
+console.log(hobbies);
