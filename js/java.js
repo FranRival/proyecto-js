@@ -1,107 +1,43 @@
 console.log("hello world")
 
+//string
+//primitivos y objetos
 
-//creacion de string
-
-const primeraOpcion = 'llaves'
-const segundaOpcion = "llaves"
-const terceraOpcion = `llaves` //templates literarios
-
-
-//concatenar
-
-const direccion = "calle falsa 1, 2, 3"
-const ciudad = "springfield"
-const direccionCompleta = "mi direccion complta es " + direccion + " " + ciudad
-
-console.log(direccionCompleta)
+const stringPrimitivo = 'un String primitivo'
+console.log(typeof stringPrimitivo)
 
 
-//concatenacion templates literarios 
-
-const nombre = "Homero"
-const pais = "🏴‍☠️"
-const presentacion = `Hola, soy ${nombre}, vengo de ${pais}`
-console.log(presentacion);
-
-//3era concatenacion. join()
-
-const primeraParte = 'Me gusta'
-const segundaParte = 'la gente de '
-const terceraParte = '🛸'
-
-const pensamiento = [primeraParte,segundaParte,terceraParte]
-console.log(pensamiento.join(' ')) //el join se puede personalizar
-
-console.log(pensamiento.join(' 🌧 ')) //el join se puede personalizar
+const stringPrimitivoTambien = String('un String primitivo')
+console.log(typeof stringPrimitivo)
 
 
-//cuarta forma de concatenar string. concat
+//string primitivo - inmutables
 
-const hobbit1 = '🧺'
-const hobbit2 = '♨'
-const hobbit3 = '🛵'
+const stringObjeto = new String('un String objeto')
+console.log(typeof stringObjeto) //sale un objeto 
 
-const hobbies = 'Mis hobbies son: '.concat(hobbit1,', ',hobbit2, ', ', hobbit3, '. ')
+const saludo = 'Hola, Como estas?'
+console.log(saludo[0]) //en el indice, arroja la letra
+console.log(saludo.charAt(2))//acceder a los indices en el string. 
+console.log(saludo.indexOf('C')) //cuando no sabemos en que ubicacion esta la letra
+console.log(saludo.indexOf('estas')) //desde donde comienza la palabra
+console.log(saludo.indexOf('estamos'))//acceder a una que no existe. -1. 
+console.log(saludo.lastIndexOf('s')) //la ultima pocision de la ultima letra
+console.log(saludo.slice(3,5)) //la ubicacion de un punto, a otro, regresa las letras dentro
+console.log(saludo.length) //cantidad de caracteres
+console.log(saludo.toLocaleUpperCase()) //mayusculas
+console.log(saludo.toLocaleLowerCase())//minusculas
 
-console.log(hobbies);
+const saludoDividido = saludo.split(' ')
+console.log(saludoDividido) //dividido por espacios
+console.log(saludoDividido[2]) //el resultado, .estas?, porque fue divididio desde arriba
 
+const saludoConEspacios = ' Hello ahora '
+const saludosSinEspacio = saludoConEspacios.trim()
+console.log(saludosSinEspacio) //quita los esapcios al principio y al final 
 
-
-///catacteres de escape
-
-//const whatDoiD = 'Im software engineer' 
-
-const whatDoiD = 'Im software engineer' 
-
-//escape alternativo
-
-const escapeAlternativo= "I'm software engineer"
-
-//2. barra invertida
-
-const barraInvertida = 'I\'m software engineer'
-
-//3. template literal 
-
-const escapeComillaINvertida = `I'm software engineer`
-
-//escritura de string largos
-
-
-/* 
-Las rosas son rojas,
-Las violetas azules,
-caracter inesperado, 
-en la linea 86
-
-*/
-
-const poema = 'Las rosas son rojas, \n' +
-             'Las violetas azules, \n' +
-             'caracter inesperado, \n' +
-             'en la linea 86'
-
-
-console.log(poema)
-
-const poema2 = 'Las rosas son rojas,\n\
-Las violetas azules,\n\
-caracter inesperado,\n\
-en la linea 86.'
-console.log(poema2);
-
-
-
-//e=string con templaete literal
-
-
-const poema3 = `Las rosas son rojas,
-Las violetas azules,
-caracter inesperado,
-en la linea 86.`
-
-console.log(poema3)
-
+const saludoOriginal = 'Hellooooo world '
+const nuevoSaludo = saludoOriginal.replace('world', '🌚')
+console.log(nuevoSaludo) //reemplazando palabras
 
 
