@@ -1,27 +1,42 @@
 console.log("hello world")
 
-//conversion a booleanos 
 
-const isActive = true
-const hasPermission = false 
+//tipos de datos primitivos:
+//null, undefined, symbol, bigint
+
+//null
+
+const snoopy = null
+console.log(snoopy)
+console.log(typeof snoopy) //tipo de objeto, siempre nulo. 
+
+//undefined 
+let name
+console.log(name) //indefinido 
 
 
-//conversion implicita 
-const resultado = 5 > 3
 
-console.log(resultado) //el resultado, muestra true o false 
-
-
-const name = "Javsascript"
-console.log(!!name) //para saber si existe la variable y si tiene algun valor 
+//symbol: valores unicos que no cambian
+const uniqueId = Symbol('id')
+const symbol1 = Symbol(1)
+const symbol2 = Symbol(1)
+console.log(symbol1===symbol2) //viendo si son true. aqui detecta que son diferentes aunque tengan el mismo valor. 
 
 
-//conversion explicita
-const value = 0
-const explicitBoolean = Boolean(value)
-console.log(explicitBoolean) //toma el 0 con falso
 
-const otherValie = 6
-const explicitBoolean1 = Boolean(otherValie)
-console.log(explicitBoolean1)
+const ID = Symbol('id')
+let user = {} //creamos un objeto vacio
+user[ID] = '1234' //pero le aqgregamos una key y 
+console.log(user) //extrano codigo alv
 
+//es util para evitar dolisiones con datos unicos. 
+
+
+//bigINt: numero muy grandes o exresiones dificiles de manejar 
+
+const bigNumber = 234454548357948n
+console.log(bigNumber)
+
+const numberOfParticlesInTHeUniverse = 1000000000000000000000000000000000000000n
+
+console.log(numberOfParticlesInTHeUniverse);
