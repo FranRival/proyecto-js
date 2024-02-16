@@ -1,42 +1,35 @@
 console.log("hello world")
 
+//type castign y coercion: conversion de tipos
+//lenguajes compilados: c, c++, rust, go, swift: este codigo es traducido antes de la ejecucion
+//chequeo estatico detipos 
 
-//tipos de datos primitivos:
-//null, undefined, symbol, bigint
+//interpretados: se traducen confirme se traduce el codigo 
+//chequeto dinamico de tipos 
 
-//null
+//js no se da cuenta, hasta que va revisando el programa
 
-const snoopy = null
-console.log(snoopy)
-console.log(typeof snoopy) //tipo de objeto, siempre nulo. 
+//js tiene un tipado debil: 
 
-//undefined 
-let name
-console.log(name) //indefinido 
+//una variable tiene un valor numero, y luego volver a asignarle un valor string. eso lo permite js
 
+const saludo = 'Hola'
+console.log(saludo)
 
+const despedida = 'ADios'
+console.log(despedida)
 
-//symbol: valores unicos que no cambian
-const uniqueId = Symbol('id')
-const symbol1 = Symbol(1)
-const symbol2 = Symbol(1)
-console.log(symbol1===symbol2) //viendo si son true. aqui detecta que son diferentes aunque tengan el mismo valor. 
+const titulo = 'No me gusta la sopa'
+console.log(titulo) //aqui ocurre un error? 
 
-
-
-const ID = Symbol('id')
-let user = {} //creamos un objeto vacio
-user[ID] = '1234' //pero le aqgregamos una key y 
-console.log(user) //extrano codigo alv
-
-//es util para evitar dolisiones con datos unicos. 
+const descripcion = 'porque esta caliente'
+console.log(descripcion)
 
 
-//bigINt: numero muy grandes o exresiones dificiles de manejar 
+const numero = 2
+const booleano = true
+console.log(numero+booleano) //error: sale 3, los covierte a conveniencia de js 
 
-const bigNumber = 234454548357948n
-console.log(bigNumber)
-
-const numberOfParticlesInTHeUniverse = 1000000000000000000000000000000000000000n
-
-console.log(numberOfParticlesInTHeUniverse);
+//CONVERSION
+//implicita: 2 + true
+//explicita: string(), Numbre(), Boolean()
