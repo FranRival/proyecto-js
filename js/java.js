@@ -36,5 +36,26 @@ const finalPrice = calculateDIscountedPrice(originalPrice,discountPercentage)
 
 
 console.log('Original Price: $' + originalPrice)
-console.log('Discount: ' + discountPercentage + '$');
-console.log('Price with discount: '+ finalPrice);
+console.log('Discount: ' + discountPercentage + '$')
+console.log('Price with discount: '+ finalPrice)
+
+
+
+
+console.log('--------------------------');
+
+
+function suma1 (a, b){
+    return a + b
+}
+
+const sumadosAntesDe = 84
+const sumadosDespuesDe = 483
+
+console.log(sumadosAntesDe*sumadosDespuesDe)
+
+
+
+
+
+/* --------------------------------- */
