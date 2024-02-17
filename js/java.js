@@ -32,3 +32,18 @@ const newHouse = {
 }
 
 dogGreeting.call(newHouse) //se le vincula: enlace explicito 
+
+
+
+function newDogGreeting(owner,address){
+    console.log(`Hellooo iam -> ${this.dogName}, and l live whit ${owner}, on ${address}`)
+} 
+
+const owner = 'Lucy'
+const address = '123 Always live'
+newDogGreeting.call(newHouse, owner,address)//funciono this shit. 
+
+//metodo call, una funcion con un objeto y a su vez diferentes parametros.
+
+//enlace explicito
+
