@@ -22,15 +22,13 @@ house.dogGreeting()
 
 
 function dogGreeting(){
-    console.log(`Hellooo iam ${this.dogName}`)
+    console.log(`Hellooo iam -> ${this.dogName}`)
 } 
 
-const house1 = {
-    dogName: 'Fido',
-    Age: 3
-     
+dogGreeting.call() //pasarle el nuevo objeto y vinculancion y pueda tomarlo
+
+const newHouse = {
+    dogName: 'COconut',
 }
 
-house1.dogGreeting() // sale un error. porque el this ya no apunta
-
-//anclar o vincular con ese objeto. en el siguiente commit
+dogGreeting.call(newHouse) //se le vincula: enlace explicito 
