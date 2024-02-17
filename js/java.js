@@ -1,31 +1,40 @@
 console.log("hello world")
 
 
-//social media profile
+//anatomia de una funcion. la funcion se utiliza una y otra vez. 
 
-//1. usar informacion
-const username = 'codingAdventure'
-const fullName = 'Jon Doe'
-const age = 25
-const isStudent = true
 
-//2. adress
-const adress = {
-    street: '123 main street',
-    city: 'tecville',
-    state: 'Codignlane',
-    codezip: 54321
+//BLACK FRIDAY 
+//que quiero? - obtener un descuento 
+
+//que datos tengo - precio, $100, y descuento del 20%
+
+//output: salida
+
+// input: entrada, valores. 
+
+function suma (a, b){
+    return a + b
 }
 
-const hobbies = ['COding', 'Reading', 'Gaming']
+suma(3,2) //valores reales, los que hace para que el programa funcione 
+console.log(suma) //sale algo diferente?....
 
-//texto personaliado. Generatoing, personalized bio
-const personalizedBio = `Hola, soy ${fullName}. 
-Tengo ${age} years old. 
-y vivo en ${adress.city},
-I love ${hobbies.join(', ')}.
-Followme for more codding adventures. 
-` 
 
-//Print the use profile and bio
-console.log(personalizedBio)
+/* --------------------------------- */
+
+function calculateDIscountedPrice (price, discountPercentage){
+    const discount = (price*discountPercentage) / 100
+    const priceWithDiscount = price - discount
+
+    return priceWithDiscount
+}
+
+const originalPrice = 100
+const discountPercentage = 20
+const finalPrice = calculateDIscountedPrice(originalPrice,discountPercentage)
+
+
+console.log('Original Price: $' + originalPrice)
+console.log('Discount: ' + discountPercentage + '$');
+console.log('Price with discount: '+ finalPrice);
