@@ -1,61 +1,32 @@
 console.log("hello world")
 
-
-//anatomia de una funcion. la funcion se utiliza una y otra vez. 
-
-
-//BLACK FRIDAY 
-//que quiero? - obtener un descuento 
-
-//que datos tengo - precio, $100, y descuento del 20%
-
-//output: salida
-
-// input: entrada, valores. 
-
-function suma (a, b){
-    return a + b
+function codifica(palabra) {
+    let palabraCodificada = "";
+    for (let i = 0; i < palabra.length; i++) {
+        palabraCodificada += String.fromCharCode(palabra.charCodeAt(i) + 1);
+    }
+    return palabraCodificada;
 }
-
-suma(3,2) //valores reales, los que hace para que el programa funcione 
-console.log(suma) //sale algo diferente?....
-
-
-/* --------------------------------- */
-
-function calculateDIscountedPrice (price, discountPercentage){
-    const discount = (price*discountPercentage) / 100
-    const priceWithDiscount = price - discount
-
-    return priceWithDiscount
+function decodifica(palabraCodificada) {
+    let palabraDecodificada = "";
+    for (let i = 0; i < palabraCodificada.length; i++) {
+        palabraDecodificada += String.fromCharCode(palabraCodificada.charCodeAt(i) - 1);
+    }
+    return palabraDecodificada;
 }
+function generaResultado() {
+    let palabrasCodificadas = ["Ejfhp", "fsft", "hsboef"];
+    let resultado = "";
+    for (let i = 0; i < palabrasCodificadas.length; i++) {
+        let palabraCodificada = palabrasCodificadas[i];
+        let palabraDecodificada = decodifica(palabraCodificada);
 
-const originalPrice = 100
-const discountPercentage = 20
-const finalPrice = calculateDIscountedPrice(originalPrice,discountPercentage)
+        resultado += palabraDecodificada;
 
-
-console.log('Original Price: $' + originalPrice)
-console.log('Discount: ' + discountPercentage + '$')
-console.log('Price with discount: '+ finalPrice)
-
-
-
-
-console.log('--------------------------');
-
-
-function suma1 (a, b){
-    return a + b
+        if (i < palabrasCodificadas.length - 1) {
+            resultado += " ";
+        }
+    }
+    console.log(resultado);
 }
-
-const sumadosAntesDe = 84
-const sumadosDespuesDe = 483
-
-console.log(sumadosAntesDe*sumadosDespuesDe)
-
-
-
-
-
-/* --------------------------------- */
+generaResultado();
