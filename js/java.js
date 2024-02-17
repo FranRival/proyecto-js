@@ -1,42 +1,57 @@
 console.log("hello world")
 
-function codifica(palabra) {
-    let palabraCodificada = "";
-    for (let i = 0; i < palabra.length; i++) {
-        palabraCodificada += String.fromCharCode(palabra.charCodeAt(i) + 1);
-    }
-    return palabraCodificada;
-}
-function decodifica(palabraCodificada) {
-    let palabraDecodificada = "";
-    for (let i = 0; i < palabraCodificada.length; i++) {
-        palabraDecodificada += String.fromCharCode(palabraCodificada.charCodeAt(i) - 1);
-    }
-    return palabraDecodificada;
-}
-function generaResultado() {
-    let palabrasCodificadas = ["Fnnbovfm", "fsft", "Hsboef"];
-    let resultado = "";
-    for (let i = 0; i < palabrasCodificadas.length; i++) {
-        let palabraCodificada = palabrasCodificadas[i];
-        let palabraDecodificada = decodifica(palabraCodificada);
+//funciones vs methodos 
 
-        resultado += palabraDecodificada;
+//capacidades que tienen las funciones al igual que otros objetos 
 
-        if (i < palabrasCodificadas.length - 1) {
-            resultado += " ";
+//1. Pasar funciones como argumentos  -> callback 
+
+
+function a (){}
+
+function b (a){}
+
+b(a)
+
+//retornar funciones 
+
+
+function a (){ //declaracion de funcion. 
+    function b (){}
+    return b
+}
+
+//asignar funciones a variables
+
+const a = function (){} //es como si esta funcion tuviera esta variable. -> expresion de funcion.
+
+//tener propiedades y metodos 
+
+function d (){}
+const obj = {}
+d.call(obj) //su contexto de ejecucion. las funciones tienen metodos asociados. 
+
+//anidar funciones -> nester functions 
+
+
+function a (){ //funciones anidadas 
+    function b (){
+        function c (){
         }
+        c()
     }
-    console.log(resultado);
+    b()
 }
-generaResultado();
 
 
-const variable1 = 65
-const variable2 = 81
-const variable3 = 69
+//es posible almacenar funciones en objetos? 
 
-const palabraMagicaALV = String.fromCharCode(variable1,variable2,variable3)
-console.log(palabraMagicaALV)
 
-//ya entendi este codigo a la dickenson. 
+const rocket = {
+    name: 'Falcon 9',
+    launchMessage: function launchMessage (){
+        console.log('🌌');
+    }
+}
+
+rocket.launchMessage()
