@@ -1,49 +1,42 @@
 console.log("hello world")
 
-//identificador this. contexto de ejcucion. 
 
-//casa = objeto
-//letero = this
-//perro = funcion
 
-const house = {
-    dogName: 'Fido',
-    dogGreeting: function (){
-        console.log(`Hellooo iam ${this.dogName}`)
-    } 
+////metodos bind, call y apply
+
+const owned = 'Lucy'
+const adress = '123 Avenue'
+
+
+function dogGreeding(owned,adress){
+    console.log(`Hi,m ${this.name} and i live with ${owned} on ${adress}`)
 }
 
-house.dogGreeting()
-
-//objeto: house, ese objeto tiene caracteristicas, nombre y saludo 
-//queremos acceder a propiedade de ese mismo objeto.
-//ese this es alusivo al objeto al que esta vinculado.
-//se le conoce como enlace implicite - implicit binding
-
-
-function dogGreeting(){
-    console.log(`Hellooo iam -> ${this.dogName}`)
-} 
-
-dogGreeting.call() //pasarle el nuevo objeto y vinculancion y pueda tomarlo
-
-const newHouse = {
-    dogName: 'COconut',
+const newHouse ={
+    dogName: "Coconut"
 }
 
-dogGreeting.call(newHouse) //se le vincula: enlace explicito 
 
+dogGreeding.call(newHouse, owned, adress) //llamamos a la funcion, pasamos los parametros ya dicional, un nuevo contexto de ejecucion
 
+const necesaryValues = [owned,adress]
 
-function newDogGreeting(owner,address){
-    console.log(`Hellooo iam -> ${this.dogName}, and l live whit ${owner}, on ${address}`)
-} 
+/* aqui es donde comienza el nuevo desmadre */
 
-const owner = 'Lucy'
-const address = '123 Always live'
-newDogGreeting.call(newHouse, owner,address)//funciono this shit. 
+dogGreeding.apply(newHouse,necesaryValues)//recibe 2 valores
 
-//metodo call, una funcion con un objeto y a su vez diferentes parametros.
+//misma funcion de proveer y manipular
 
-//enlace explicito
+const bidingWithBind = dogGreeding.bind(newHouse, owned, adress) //ya no ejecuta la funcion, sino da otra funcion
+console.log(bidingWithBind) //devuelve una funcion, 
 
+//aqui la forma como se escribe y no devuelva una funcion en consola
+
+bidingWithBind() //
+
+//3 metodos que permiten cambiar el contexto de ejecucion. colocarle otros metodos y parametros.
+
+//call, bind, apply.
+//si son un monton de parametros, se organizan en un array + apply
+//si son pocos parametros, se utiliza call si tenemos uno o 2
+//bind si se necesite una funcion y que esa funcion sea ejecutada para obtener otra funcion con un contexto de ejecucion diferente 
