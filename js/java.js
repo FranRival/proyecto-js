@@ -1,20 +1,57 @@
 console.log("hello world")
 
+//funciones de flecha y enlace lexico
 
-const caricatura = {
-    nombre: 'Vaca y pollito'
+//funcion tradicional
+
+function almuerzo (proteina,verdura){
+    return `${proteina}, ${verdura}`
 }
 
-function recuerdo (personaje){
-    console.log(`${this.nombre} era mi caricatura favorita. Me encanta ver las aventuras de ${personaje}`);
+almuerzo ('🥩','🌵')
+
+
+
+//arrow function
+
+const almuerzo1 = (proteina,verdura)=>{
+    return `${proteina}, ${verdura}`
 }
 
-recuerdo.call(caricatura, 'vaca') //aqui da el mensaje: Vaca y pollito era mi caricatura favorita. Me encanta ver las aventuras de vaca
+
+//ejemplo vivo de un arrow functiom
+
+const greeting = function (nombre){
+    return`Hello,, ${nombre}`
+}
 
 
-recuerdo.bind(caricatura, 'pollito') //aqui no devuelve nada. si queremos ver esa funcion hay que ejcutar esta nueva funcion
+//arrow function - explicit return
+const newGreeting = (nombre) => { //misma expresionde funcion pero sin function y con flecha
+    return`Hello,, ${nombre}`
+}
 
-//asi es como hacer praa que devuelv un resultado
+//arrow function - implicit return
+const newGreetingImplicit = nombre => `Hello,, ${nombre}`
 
-const impresion = recuerdo.bind(caricatura, 'pollito')
-impresion()//ahora ya devuelve el mensaje
+//necesitamos colocar los parentesis cuando hay mas de un parametro
+
+const newGreetingImplicitWithTwoParameters = (nombre, lastName) => `Hello,, ${nombre}, ${lastName}`
+
+
+
+//lexical binding
+const ficcionalCaraceter = { //tenemos un objeto
+    name: 'Uncle jack', //nombre
+    messageWithTradicionalFunction: function (message){//metodo
+        console.log(`${this.name} say: ${message}`)
+    },
+    messageWithArrowfunction: (message)=> {
+        console.log(`${this.name} say: ${message}`)
+    },
+}
+
+
+ficcionalCaraceter.messageWithTradicionalFunction('El tio ben se le dispararon alv') //aqui toma el nombre
+ficcionalCaraceter.messageWithArrowfunction('ya esta tieso y spiderman los see') //aqui no toma nada del nombre. this para arrow, no existe. 
+
