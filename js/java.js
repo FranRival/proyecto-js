@@ -2,31 +2,31 @@ console.log("hello world")
 
 
 
-const personalizedMessage = () => 'la gorda esta en el tobogan!'
+//10 tipos de funciones
 
-//funciones constructoras
-function Rocket (name, ownedMessage){// crear un objeto a partir de una funcion. y creamos sus priedades.
-    this.name = name
-    this.launchMessage = ownedMessage 
-}
+// 1. Funciones Declarativas (o con nombre):
+function suma(a, b) { return a + b; } 
 
-const falcon9Rocket = new Rocket('Falcon9', personalizedMessage) //una instancia de ese objeto
-const falcon10Rocket = new Rocket('Falcon10', 'a ver si no se estrella')
+// 2. Funciones Expresivas (o anónimas):
+const suma = function(a, b) { return a + b; };
 
+// 3. Funciones Flecha:
+const suma = (a, b) => a + b; 
 
-console.log(falcon9Rocket.name)
-console.log(falcon9Rocket.launchMessage())
+// 4. Funciones Constructoras:
+function Persona(nombre, edad) { this.nombre = nombre; this.edad = edad; } const persona1 = new Persona('Juan', 25); 
 
-//crear funciones constructrasa partir de arrow functions. no se puede utilizar new.
+// 5. Funciones de Orden Superior (Higher-Order Functions):
+function factorial(n) { if (n === 0 || n === 1) { return 1; } else { return n * factorial(n - 1); } } 
 
-const RocketWithArrowFunction = (name, ownedMessage) => ({ //objeto a apartir de un arrow function
-    name: name,
-    launchMessage: ownedMessage
-})
+// 7. Funciones Anidadas (Nested Functions):
+function exterior() { let variableExterior = 'Exterior'; function interior() { console.log(variableExterior); } interior(); } exterior(); 
 
-const personalizedMessageForArrowFunction = () => 'xxxxxxxxx!'
-const falcon9Rocket1 = RocketWithArrowFunction('Falcon99', personalizedMessageForArrowFunction)
+// 8. Métodos de Objeto:
+const objeto = { metodo: function() { console.log('Hola desde el método'); } }; objeto.metodo(); 
 
-console.log(falcon9Rocket1.name)
-console.log(falcon9Rocket1.launchMessage) //aparece la funcion, 
-console.log(falcon9Rocket1.launchMessage())//aparece ejecutada la funcion 
+// 9. Funciones Asincrónicas:
+async function fetchData() { const response = await fetch('<https://api.example.com/data>'); const data = await response.json(); console.log(data); } 
+
+// 10. Funciones Puras:
+function suma(a, b) { return a + b; } 
