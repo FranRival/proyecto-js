@@ -2,16 +2,18 @@ console.log("hello world")
 
 
 //funciones constructoras
-
-const cohete = {
-    nombre: 'Falcon 9',
-    mensajeDespegue: function mensageDeDespegue (){
-        console.log('🌀');
+function Rocket (name){// crear un objeto a partir de una funcion. y creamos sus priedades.
+    this.name = name
+    this.launchMessage = function (){
+        console.log('🌅')
     }
 }
 
-//duplicar codigo: es dificil, 
-// escribir un monton de cohetes es dificil, son un monton de cohetes.
+const falcon9Rocket = new Rocket('Falcon9') //una instancia de ese objeto
+const falcon10Rocket = new Rocket('Falcon10')
 
 
-//funciones sirven para reutilizar codigo. crear fragmentos de codigo, y con esos fragmentos crear algo mas. 
+console.log(falcon9Rocket.name)
+console.log(falcon9Rocket.launchMessage())
+
+
