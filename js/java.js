@@ -15,6 +15,7 @@ const falcon10Rocket = new Rocket('Falcon10', 'a ver si no se estrella')
 
 
 console.log(falcon9Rocket.name)
-console.log(falcon9Rocket.launchMessage())
+console.log(falcon10Rocket.launchMessage)
+console.log(falcon10Rocket.ownedMessage)
 
 
