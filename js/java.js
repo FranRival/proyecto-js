@@ -1,14 +1,12 @@
 console.log("hello world")
 
 
+'use strict'
 window.name = 'SpongeBob'
 
-//metodo window y modo estricto
 
 function fevoritCaracter (){
     console.log(this.name)
 }
-
-
 
 fevoritCaracter()
