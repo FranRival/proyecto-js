@@ -13,3 +13,8 @@ recuerdo.call(caricatura, 'vaca') //aqui da el mensaje: Vaca y pollito era mi ca
 
 
 recuerdo.bind(caricatura, 'pollito') //aqui no devuelve nada. si queremos ver esa funcion hay que ejcutar esta nueva funcion
+
+//asi es como hacer praa que devuelv un resultado
+
+const impresion = recuerdo.bind(caricatura, 'pollito')
+impresion()//ahora ya devuelve el mensaje
