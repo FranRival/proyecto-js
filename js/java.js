@@ -1,20 +1,16 @@
 console.log("hello world")
 
-//proyecto, adivina el numero
+//ejecucion terniaria 
 
-const numeroSecreto = Math.floor(Math.random() * 10 +1)
+let mensaje 
+const edad = 18
 
-const numeroJugador = parseInt (prompt('Adivina, el number secreto entre el 1 al 10'))
-
-
-console.log(`Este es el numero con el que juega ${numeroJugador}`);
-
-
-if (numeroJugador===numeroSecreto) {
-    console.log('Yo fucking winning 🏎');
-    
-}else if (numeroJugador <= numeroSecreto){
-    console.log("El numero es demasiado bajo");
+if (edad <= 8) {
+    mensaje = 'Es mayor de edad. Puede pasar'
 }else {
-    console.log("so much hight");
+    mensaje= "no es mayor de edad. No puede pasar."
 }
+
+console.log(mensaje);
+
+
