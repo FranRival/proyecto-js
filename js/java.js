@@ -1,31 +1,20 @@
 console.log("hello world")
 
-//ejecucion condicional if - estructuras de control
+//proyecto, adivina el numero
+
+const numeroSecreto = Math.floor(Math.random() * 10 +1)
+
+const numeroJugador = parseInt (prompt('Adivina, el number secreto entre el 1 al 10'))
 
 
+console.log(`Este es el numero con el que juega ${numeroJugador}`);
 
-if (let == algo) {//si pasa esto,, que se ejecute esto. 
-    codigo //que tiene que suceder si se cumple
+
+if (numeroJugador===numeroSecreto) {
+    console.log('Yo fucking winning 🏎');
     
-}else { // sino se cumple
-
-    
-}
-
-
-if (let == algo) {
-    codigo 
-    
-}else if (let) { 
-    codigo
+}else if (numeroJugador <= numeroSecreto){
+    console.log("El numero es demasiado bajo");
 }else {
-
-}
-
-let nombre = 'Halo'
-if (nombre === 'Halo') {
-    console.log('Its fcking true');
-    
-}else {
-    console.log('No, esa cosa no es halo');
+    console.log("so much hight");
 }
