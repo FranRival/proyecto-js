@@ -1,60 +1,38 @@
 console.log("hello world")
 
 
-//implicit binding
-const person = {
-    name: 'Adam',
-    greet: function() {
-      console.log(`Hello, I'm ${this.name}`);
+
+//expresions vs statemens
+//expresiones versus declaraciones
+//expresiones: producen un valor y van acompanados de na delcaracion
+
+//crear biografia de personajes con js
+
+//Create powerfullGIrl obj
+
+function powerfullGIrl (name, color, power){
+    this.name = name
+    this.color =color
+    this.power = power
+    this.isLeader = false
+
+    this.displayInfo = function (){
+        console.log(`Powerfully girl information:
+        Name: ${this.name}
+        Color: ${this.color}
+        Superpower: ${this.power}
+
+        `);
     }
-  };
-  
-  person.greet(); // Output: Hello, I'm Adam
+}
+
+const blossom = new powerfullGIrl('Blossom', 'pink', 'Ice bread')
+const butterCup = new powerfullGIrl('ButterCup', 'green', 'Super Strong') 
+const bubbles = new powerfullGIrl('Bubbles', 'blue', 'Fly')
+
+blossom.displayInfo()
+butterCup.displayInfo()
+bubbles.displayInfo()
 
 
-
-
-  //Explicit binding
-  function greet() {
-    console.log(`Hello, I'm ${this.name}`);
-  }
-  
-  const adam = { name: 'Adam' };
-  
-  greet.call(adam); // Output: Hello, I'm Adam
-
-
-
-  //New Binding
-
-  function Person(name) {
-    this.name = name;
-  }
-  
-  const adam1 = new Person('Adam');
-  console.log(adam1.name); // Output: Adam
-
-
-
-  //Lexical Binding:
-
-  const person1 = {
-    name: 'Adam',
-    greet: function() {
-      const innerFunction = () => {
-        console.log(`Hello, I'm ${this.name}`);
-      };
-      innerFunction();
-    }
-  };
-  
-  person1.greet(); // Output: Hello, I'm Adam
-
-
-  //Window Binding:
-  function showName() {
-    console.log(this.name);
-  }
-  
-  window.name = 'Adam';
-  showName(); // Output: Adam
+///oly fukkin shit. ya entiendo more la shite de ${} aunque no esten here. demond
