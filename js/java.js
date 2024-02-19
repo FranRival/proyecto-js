@@ -21,8 +21,13 @@ function powerfullGIrl (name, color, power){
         Name: ${this.name}
         Color: ${this.color}
         Superpower: ${this.power}
+        ${this.isLeader ? 'Leader: yes' : 'Leader: No'}
 
         `);
+    }
+    this.becomeLeader = function(){
+        this.isLeader = true
+        console.log(`${this.name} has become the leader of powerfully girls`);
     }
 }
 
