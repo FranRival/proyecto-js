@@ -1,47 +1,27 @@
 console.log("hello world")
 
+//operadores de comparacion
+
+// == igual a otra cosa. si esverdad, hara ciertas cosas. sino, hara otras. 
+// === si algo es igual a algo, pero va a generar una verificacion en 2 temas: en el valor, y le tipo de dato. 
 
 
-//expresions vs statemens
-//expresiones versus declaraciones
-//expresiones: producen un valor y van acompanados de na delcaracion
+//===: igualdad en el valor, y el tipo de dato. si ambos lo son, daran un true. y si no, un false.
 
-//crear biografia de personajes con js
+//!= si es diferente de: true. si es igual, dara un false. 
 
-//Create powerfullGIrl obj
-
-function powerfullGIrl (name, color, power){
-    this.name = name
-    this.color =color
-    this.power = power
-    this.isLeader = false
-
-    this.displayInfo = function (){
-        console.log(`Powerfully girl information:
-        Name: ${this.name}
-        Color: ${this.color}
-        Superpower: ${this.power}
-        ${this.isLeader ? 'Leader: yes' : 'Leader: No'}
-
-        `);
-    }
-    this.becomeLeader = function(){
-        this.isLeader = true
-        console.log(`${this.name} has become the leader of powerfully girls`);
-    }
-}
-
-const blossom = new powerfullGIrl('Blossom', 'pink', 'Ice bread')
-const butterCup = new powerfullGIrl('ButterCup', 'green', 'Super Strong') 
-const bubbles = new powerfullGIrl('Bubbles', 'blue', 'Fly')
-
-blossom.displayInfo()
-butterCup.displayInfo()
-bubbles.displayInfo()
+//!==: este valor es diferente de este valor, porque entonces es diferente en el valor y en el tipo de datos.
+//es diferente en el valor, y en el tipo de valor
 
 
-blossom.becomeLeader() //aqui a convertimos en lider
 
-blossom.displayInfo()
-butterCup.displayInfo()
-bubbles.displayInfo()
+//>: mayor
+//<: menor
+//>=: si es mayor o igual a este otro valor, podemos avanzar. 
+//<=: si es menor a este valor, entonces regres un true, o sino, regresa un flse
+
+const a = 10
+const b = 20
+const c = "10"
+
+a == b
