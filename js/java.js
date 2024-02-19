@@ -1,20 +1,31 @@
 console.log("hello world")
 
-//operadores logicos
-
-//&&: si este valor y este valor hacen esto, y hacen esto , pasa esto
-
-//||: si valor o b, se cumplen, podemos continuar con esta parte
-
-//!: si este valor no es esto
+//ejecucion condicional if - estructuras de control
 
 
-const a = 10
-const b = 20
-const c = "10"
 
-a == b && a === c //false
+if (let == algo) {//si pasa esto,, que se ejecute esto. 
+    codigo //que tiene que suceder si se cumple
+    
+}else { // sino se cumple
 
-a != b || a === c // true
+    
+}
 
-!(a === c) //
+
+if (let == algo) {
+    codigo 
+    
+}else if (let) { 
+    codigo
+}else {
+
+}
+
+let nombre = 'Halo'
+if (nombre === 'Halo') {
+    console.log('Its fcking true');
+    
+}else {
+    console.log('No, esa cosa no es halo');
+}
