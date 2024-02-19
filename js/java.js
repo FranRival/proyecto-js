@@ -40,4 +40,8 @@ butterCup.displayInfo()
 bubbles.displayInfo()
 
 
-///oly fukkin shit. ya entiendo more la shite de ${} aunque no esten here. demond
+blossom.becomeLeader() //aqui a convertimos en lider
+
+blossom.displayInfo()
+butterCup.displayInfo()
+bubbles.displayInfo()
