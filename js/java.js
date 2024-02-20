@@ -1,39 +1,55 @@
 console.log("hello world")
 
-//
-// Definición de una función llamada realizarTarea que toma un argumento llamado 'dia'
-function realizarTarea(dia) {
-    // Inicia la declaración switch, que evaluará el valor de 'dia'
-    switch (dia) {
-        // Si 'dia' es igual a cualquiera de estos casos ('lunes', 'martes', 'miércoles', 'jueves', 'viernes')
-        case 'lunes':
-        case 'martes':
-        case 'miércoles':
-        case 'jueves':
-        case 'viernes':
-            // Imprime en la consola que es un día laboral y se están realizando tareas laborales
-            console.log('Es un día laboral. Realizando tareas laborales.');
-            // Sale del bloque switch
-            break;
+//switch: muy similar a switch.
 
-        // Si 'dia' es igual a 'sábado' o 'domingo'
-        case 'sábado':
-        case 'domingo':
-            // Imprime en la consola que es fin de semana y se está disfrutando del tiempo libre
-            console.log('Es fin de semana. Disfrutando del tiempo libre.');
-            // Sale del bloque switch
-            break;
+//si se va cumpliendo. la diferencia: validamos diferentes cosas. 
 
-        // Si 'dia' no coincide con ninguno de los casos anteriores
-        default:
-            // Imprime en la consola que el día no es reconocido y sugiere verificar la entrada
-            console.log('Día no reconocido. Verifica la entrada.');
-    }
+
+
+/* switch (expresion) { //la condicion que se va a evaluar 
+    case value1:
+        //codigo a ejecutar
+        
+        break;
+
+     case value2: 
+     //codigo a ejecutar
+
+    default:
+
+    //codigo a ejecutar
+        break;
+} */
+
+
+let expresion = "Papayas"
+
+switch (expresion) {
+    case "Naranjas":
+        console.log("Las naranjas cuestan $20 el kilo.");
+        break;
+
+    case "Manzanas":
+        console.log("Las manzanas cuestan $43 el kilo"); 
+
+    case "Platanos":
+        console.log("Los platanos cuestan $50 el kilo");
+
+    case "Mangos":
+
+    case "Papayas":
+        console.log("Las papayas cuestan $35 el kilo");
+
+        break;
+
+    default:
+        console.log(`Lo sentimos, no contamos con ${expresion}`);
+        break;
 }
 
-// Ejemplos de uso de la función realizarTarea con diferentes días como argumentos
-realizarTarea('lunes');     // Día laboral
-realizarTarea('sábado');    // Fin de semana
-realizarTarea('domingo');   // Fin de semana
-realizarTarea('miércoles'); // Día laboral
-realizarTarea('julio');     // Día no reconocido
+console.log("Hay algo mas que desees?");
+
+//swithc es diferente a if porque no esta utilizando opciones de comparacion. para ver si lo que queremos evaluar existe. 
+
+//switch hace un operador escrito. evaluara si el valor es igual al que teneos ahi. si es igual, estrictamente igual, se ejecutara. 
+//es como utilizar ===
