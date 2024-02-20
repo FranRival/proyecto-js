@@ -1,55 +1,11 @@
 console.log("hello world")
 
-//switch: muy similar a switch.
+//loop: for
 
-//si se va cumpliendo. la diferencia: validamos diferentes cosas. 
-
-
-
-/* switch (expresion) { //la condicion que se va a evaluar 
-    case value1:
-        //codigo a ejecutar
-        
-        break;
-
-     case value2: 
-     //codigo a ejecutar
-
-    default:
-
+for (variable; condicion; incremento){
     //codigo a ejecutar
-        break;
-} */
+}//la condicion, siempre vendra de una variable externa 
 
-
-let expresion = "Papayas"
-
-switch (expresion) {
-    case "Naranjas":
-        console.log("Las naranjas cuestan $20 el kilo.");
-        break;
-
-    case "Manzanas":
-        console.log("Las manzanas cuestan $43 el kilo"); 
-
-    case "Platanos":
-        console.log("Los platanos cuestan $50 el kilo");
-
-    case "Mangos":
-
-    case "Papayas":
-        console.log("Las papayas cuestan $35 el kilo");
-
-        break;
-
-    default:
-        console.log(`Lo sentimos, no contamos con ${expresion}`);
-        break;
-}
-
-console.log("Hay algo mas que desees?");
-
-//swithc es diferente a if porque no esta utilizando opciones de comparacion. para ver si lo que queremos evaluar existe. 
-
-//switch hace un operador escrito. evaluara si el valor es igual al que teneos ahi. si es igual, estrictamente igual, se ejecutara. 
-//es como utilizar ===
+//si la condicion sucede, va aincrementar
+//cuando regreemos a la segunda vuelta, valdra mas. y entonces sucedera algo. 
+//se repetira infinitamente hasta que la condicion, se rompa.cuando ya no sea verdad, el codigo se deja de ejecutar. 
