@@ -1,22 +1,25 @@
 console.log("hello world")
 
 //loop: 
-//while
+//do while 
+
+/* do{
+    //codigo
+}while(condicion){
+    
+} */
 
 
-//iterar: meter instrucciones en un ciclo, que se valla repitiendo, siempre y cuando sea true.
+let contador = 0 
 
-/* 
-while(condicion){
-    //codigo. 
-}//loop infinito.  */
-
-
-
-let contador = 0
-
-
-while (contador < 10){
-    console.log(contador)
+do {
+    console.log(contador);
     contador++
+}while(contador < 10){
+
 }
+
+//la diferencia: en un do while, primero se va a ejecutar un codigo, antes de validar la condicion.
+
+//while: validar la condicion, antes de ejecutar el codigo.
+
