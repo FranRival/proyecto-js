@@ -10,11 +10,27 @@ console.log("hello world")
 
 //arrays y string: elementos adentro que generan una lista. tiene una propiedad, y la proeidad un valor. 
 
-for (const variable in object) {
-    if (Object.hasOwnProperty.call(object, variable)) {
-        const element = object[variable];
-        
-    }
+
+const listaDeCompras = {//objeto. propiedades basicas.
+    manzana: 5,
+    peras: 3,
+    naranja: 2,
+    uva: 1
 }
 
-//por cada elemento y propiedad en este objeto, ejecutame este codigo, y regresame algo
+
+//para iterar.
+
+for (const frutas in listaDeCompras) {
+    console.log(frutas);
+}
+
+
+//frutas es el indice 0 
+for (frutas in listaDeCompras){
+    console.log(`${frutas} : ${listaDeCompras[frutas]}`);
+}
+
+for (frutas of listaDeCompras){
+    console.log(frutas);//error. listaa de compras no es iterable. 
+}
