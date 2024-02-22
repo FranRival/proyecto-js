@@ -1,19 +1,34 @@
 console.log("hello world")
 
 //array: push y pop
+//ejercicio:
 
-//push: anadir mas informacion al final del array. y devuelve la longitud del array.
+let librosCarrito = []
 
-//metodos que modifican el array original (mutabilidad)
+const ADD_TO_CART_ACTION = 'Agregar al carrito'
+const DELETE_FROM_CART_ACTION = "Eliminado del carrito"
+const VIEW_FROM_CART_ACTION = "Ver el carrito"
 
-const paises = ['Usa', 'Canada', 'Uk']
-const newPaises = paises.push("Alemania", "Australia")
+function performCartActions(action, nuevoLibro){
+    switch (action) {
+        case ADD_TO_CART_ACTION:
+            librosCarrito.push(nuevoLibro)
+            break;
 
-console.log(paises) //arroja la lista
-console.log(newPaises) //arroja numeros
+        case DELETE_FROM_CART_ACTION:
+            if (librosCarrito.length === 0) {
+                console.log("El carrito vacio. No hay libros para quitar.");
+            }else{
+                const removeLibro = librosCarrito.pop()
+                console.log(`Quitamos el libro del carro ${removeLibro}`)
+            }
+            break;
 
-//pop: elimina el ultimo elemento del array. y devuelve ese valor.
-
-const removedPais = paises.pop()
-console.log(paises)
-console.log(removedPais)
+         case VIEW_FROM_CART_ACTION:
+            console.log('El carro de libros ', librosCarrito);
+            break;
+    
+        default:
+            break;
+    }
+}
