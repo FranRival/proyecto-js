@@ -39,3 +39,9 @@ function performCartActions(action, nuevoLibro){
     }
 }
 
+performCartActions(ADD_TO_CART_ACTION, 'Kamasutra')//no muestra nada
+performCartActions(VIEW_FROM_CART_ACTION)//muestra algo
+performCartActions(ADD_TO_CART_ACTION, 'Kamasutra Vol. 2')
+performCartActions(VIEW_FROM_CART_ACTION)
+performCartActions(DELETE_FROM_CART_ACTION)
+
