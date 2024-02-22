@@ -29,3 +29,13 @@ console.log(oneNumer)
 const emptyArray = []
 console.log(emptyArray) //vacios, cuando lo iremos llenando
 
+const recipesIngredientes = [ //array mixto
+    'Four',
+    true,
+    2,{
+        Ingredientes: 'Milk', quantity: '1 cup'
+    },
+    false
+]
+
+console.log(recipesIngredientes);
