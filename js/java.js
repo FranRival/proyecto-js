@@ -49,3 +49,22 @@ console.log(firstFruit)
 //lengt de un array
 const numberOfFruits = frutas.length
 console.log(numberOfFruits)
+
+
+//mutabilidad
+frutas.push('Melon') //inyectar informacion
+console.log(frutas)
+
+
+//inmutabilidad
+const newFrutas = frutas.concat(['Peras', 'Kiwi'])
+console.log(newFrutas) //nuevo array 
+console.log(frutas) //array sin modificar
+
+//no todos los metodos modifican el array original 
+
+//verificar si un array es un array
+
+const isArray = Array.isArray(frutas)
+console.log(isArray) //saber si es un array. arroja un boleano. true o false. 
+
