@@ -38,4 +38,14 @@ const recipesIngredientes = [ //array mixto
     false
 ]
 
-console.log(recipesIngredientes);
+console.log(recipesIngredientes)
+
+
+//accesing array elements
+
+const firstFruit = frutas[0]
+console.log(firstFruit) 
+
+//lengt de un array
+const numberOfFruits = frutas.length
+console.log(numberOfFruits)
