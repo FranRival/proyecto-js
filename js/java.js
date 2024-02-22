@@ -1,19 +1,19 @@
 console.log("hello world")
 
-//array:
+//array: push y pop
 
+//push: anadir mas informacion al final del array. y devuelve la longitud del array.
 
-//practical excersice
-//la suma de todos los elementos de un array
+//metodos que modifican el array original (mutabilidad)
 
-const numberArray = [1, 2, 3, 4, 5]
-let sum = 0
+const paises = ['Usa', 'Canada', 'Uk']
+const newPaises = paises.push("Alemania", "Australia")
 
-//sumar los numeros del arrays. iterar cada pocision.
+console.log(paises) //arroja la lista
+console.log(newPaises) //arroja numeros
 
-for (let i = 0;i < numberArray.length; i++){
-    sum += numberArray[i] //igual a la suma de numberArray, mas lo que teniamos anteriormente 
-}//una operacion simple.
+//pop: elimina el ultimo elemento del array. y devuelve ese valor.
 
-console.log(sum)
-
+const removedPais = paises.pop()
+console.log(paises)
+console.log(removedPais)
