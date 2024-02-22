@@ -9,6 +9,12 @@ const ADD_TO_CART_ACTION = 'Agregar al carrito'
 const DELETE_FROM_CART_ACTION = "Eliminado del carrito"
 const VIEW_FROM_CART_ACTION = "Ver el carrito"
 
+
+
+function verCarrito (){
+    console.log('El carro de libros ', librosCarrito);
+}
+
 function performCartActions(action, nuevoLibro){
     switch (action) {
         case ADD_TO_CART_ACTION:
@@ -25,10 +31,11 @@ function performCartActions(action, nuevoLibro){
             break;
 
          case VIEW_FROM_CART_ACTION:
-            console.log('El carro de libros ', librosCarrito);
+            verCarrito()
             break;
     
         default:
-            break;
+            console.log("Elige una opcion valida.");
     }
 }
+
