@@ -29,8 +29,14 @@ function managePlaylist(playlist, newSong){
     return playlist
 }
 
-const inicialPlaylist = ['back in black', 'Sweater weater', 'Eventualy']
+const inicialPlaylist = ['Religious man', 'Sweater weater', 'Eventualy']
 const newSongtoAdd = 'blank space'
 
 const updatedPlaylist = managePlaylist(inicialPlaylist, newSongtoAdd)
 console.log(updatedPlaylist) //asi es como se debe de hacer. esta encapsulado en una constante. 
+
+console.log('Initial playlist:' + inicialPlaylist)
+console.log('New song to add ' + newSongtoAdd)
+console.log(updatedPlaylist)
+
+//sale un detalle: 
