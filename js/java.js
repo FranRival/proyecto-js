@@ -1,47 +1,36 @@
 console.log("hello world")
 
-//array: push y pop
-//ejercicio:
+//array:
 
-let librosCarrito = []
+//metodos que modifican el array
 
-const ADD_TO_CART_ACTION = 'Agregar al carrito'
-const DELETE_FROM_CART_ACTION = "Eliminado del carrito"
-const VIEW_FROM_CART_ACTION = "Ver el carrito"
+//shift: elimina el primer eleemento del Array, y lo devuelve. 
+
+const colors = ['Yellow', 'Blue', 'Red']
+const removeColor = colors.shift()
+
+console.log(colors)
+console.log(removeColor)
+
+//unshift: agrega uno mas elementos al array, al principio. y devuelve el tamano del array luego de la modificacion
+
+const newColors = colors.unshift("purple", 'pink')
 
 
+console.log(colors)
+console.log(newColors)
 
-function verCarrito (){
-    console.log('El carro de libros ', librosCarrito);
+
+//ejercicio
+
+function managePlaylist(playlist, newSong){
+    playlist.shift()
+    playlist.unshift(newSong)
+    return playlist
 }
 
-function performCartActions(action, nuevoLibro){
-    switch (action) {
-        case ADD_TO_CART_ACTION:
-            librosCarrito.push(nuevoLibro)
-            break;
+const inicialPlaylist = ['back in black', 'Sweater weater', 'Eventualy']
+const newSongtoAdd = 'blank space'
 
-        case DELETE_FROM_CART_ACTION:
-            if (librosCarrito.length === 0) {
-                console.log("El carrito vacio. No hay libros para quitar.");
-            }else{
-                const removeLibro = librosCarrito.pop()
-                console.log(`Quitamos el libro del carro ${removeLibro}`)
-            }
-            break;
-
-         case VIEW_FROM_CART_ACTION:
-            verCarrito()
-            break;
-    
-        default:
-            console.log("Elige una opcion valida.");
-    }
-}
-
-performCartActions(ADD_TO_CART_ACTION, 'Kamasutra')//no muestra nada
-performCartActions(VIEW_FROM_CART_ACTION)//muestra algo
-performCartActions(ADD_TO_CART_ACTION, 'Kamasutra Vol. 2')
-performCartActions(VIEW_FROM_CART_ACTION)
-performCartActions(DELETE_FROM_CART_ACTION)
-
+const updatedPlaylist = managePlaylist(inicialPlaylist, newSongtoAdd)
+console.log(updatedPlaylist) //asi es como se debe de hacer. esta encapsulado en una constante. 
