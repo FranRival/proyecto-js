@@ -1,42 +1,57 @@
-console.log("hello world")
 
-//array:
+//array:4 metodos de array que modifican el array original.
 
-//metodos que modifican el array
+//splice: elimina o agrega espacios de informacion en el array 
 
-//shift: elimina el primer eleemento del Array, y lo devuelve. 
+const vegetales = ['peras', 'gitomates', 'brocoli', 'potato']
 
-const colors = ['Yellow', 'Blue', 'Red']
-const removeColor = colors.shift()
+//decirle cual eliminar y cual agregar
 
-console.log(colors)
-console.log(removeColor)
+const removeVegetales = vegetales.splice(2, 1, 'cucumber', 'onion') //pocision. luego, la cantidad de elementos. . y la nueva informacion.
+console.log(vegetales)
+console.log(removeVegetales) //me imprime solo lo que eleimine 
 
-//unshift: agrega uno mas elementos al array, al principio. y devuelve el tamano del array luego de la modificacion
+//reverse
+//organizar array a la inversa. atras hacia adelante.
 
-const newColors = colors.unshift("purple", 'pink')
+const numbers = [1,2,3,4,5]
+const reverseNumber = numbers.reverse()
+
+console.log(numbers)
+console.log(reverseNumber)
+
+//modifican el array. original y nuevo. sin distingos 
+
+//sort. el array ordenado. with numbers.
+
+const unsortedNumbers = [1,4,18,1,62,34]
+const unicodeSortedNumbers = unsortedNumbers.sort()
+
+console.log(unsortedNumbers)
+console.log(unicodeSortedNumbers)
+//los convierte en strings.revisa el unicode. y los ordena. 
 
 
-console.log(colors)
-console.log(newColors)
+//organizar numeros 
+const unsortedNumbers1 = [1,4,18,1,62,34]
+const sortedNumbers = unsortedNumbers1.sort((a,b)=>a - b) //el primer numero, y el segundo. 1 y 4. 
+//arrow function: 1 menos 4. es igual a -3. al encontrar el numero negativo: lo que hace, ordena. 
+//1 es menor de 4. 
+//y lo hace con los siguientes numeros. 
+//4 - 18: -17. 
+console.log(sortedNumbers)
+console.log(unsortedNumbers1);
 
 
-//ejercicio
+//sort con string: por utf-16
 
-function managePlaylist(playlist, newSong){
-    playlist.shift()
-    playlist.unshift(newSong)
-    return playlist
-}
+const cities = ['Nueva york', 'tokio', 'londres']
+const sortedCities = cities.sort()
+console.log(cities)
+console.log(sortedCities)
 
-const inicialPlaylist = ['Religious man', 'Sweater weater', 'Eventualy']
-const newSongtoAdd = 'blank space'
 
-const updatedPlaylist = managePlaylist(inicialPlaylist, newSongtoAdd)
-console.log(updatedPlaylist) //asi es como se debe de hacer. esta encapsulado en una constante. 
+//fill: cambia los elementos por un valor estatico. 
 
-console.log('Initial playlist:' + inicialPlaylist)
-console.log('New song to add ' + newSongtoAdd)
-console.log(updatedPlaylist)
-
-//sale un detalle: 
+const ages = [21,23, 35, 45]
+console.log(ages.fill('🎁', 2, 4));
