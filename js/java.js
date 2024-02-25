@@ -1,30 +1,22 @@
 
-//proyecto de cartas
+//map() y foreach()
 
-const deck = ['♠', '♥', '♣', '♦','♠', '♥', '♣', '♦','♠', '♥', '♣', '♦']
+// Convert Fahrenheit to Celsius
 
-function barajarCartas (){
-    for (let i = deck.length -1; i > 0; i--) { 
-        const j = Math.floor(Math.random() * i +1); //rango, va a ser de 0 hasta i. 
-        [deck[i], deck[j]] = [deck[j], deck[i]]
-        //un algoritmo:Fisher-Yates. barajas de cartas. 
-    }
-}
+const fahrenheit = [120, 50, 25, 34]
 
-function dealCards (numCard){
-    const dealCards = deck.splice(0,numCard)
-    return dealCards
-}
+const celsius = fahrenheit.map(item => parseFloat((5/9*(item-32)).toFixed(1)))
 
+console.log('Temperatures in Fahrenheit: ',fahrenheit);
+console.log('Temperatures in Celsius: ',celsius);
 
-barajarCartas()
-const player1 = dealCards(3)
-const player2 = dealCards(3)
-const player3 = dealCards(3)
+// Sum all the elements of an array
 
-console.log("Manos del jugador n1", player1)
-console.log("Manos del jugador n2", player2)
-console.log("Manos del jugador n3", player3)
+const numbers = [1, 2, 3, 4, 5]
 
+let sumOfNumbers = 0
 
-//el punto y coma puede dar a error. en la linea 8... 
+numbers.forEach(num => sumOfNumbers += num)
+
+console.log('Array of Numbers: ', numbers);
+console.log('The sum of the numbers is: ', sumOfNumbers);
