@@ -1,22 +1,22 @@
 
 //map() y foreach()
 
-// Convert Fahrenheit to Celsius
+// no modifican el array original.
 
-const fahrenheit = [120, 50, 25, 34]
+//permite colocar una funcion en cada elemento del array. 
 
-const celsius = fahrenheit.map(item => parseFloat((5/9*(item-32)).toFixed(1)))
+const numbers = [1,2,3,4,5]
+const squareNumbers = numbers.map(num => num * num)
 
-console.log('Temperatures in Fahrenheit: ',fahrenheit);
-console.log('Temperatures in Celsius: ',celsius);
+console.log(numbers)
+console.log(squareNumbers)
 
-// Sum all the elements of an array
 
-const numbers = [1, 2, 3, 4, 5]
+//foreach: 
 
-let sumOfNumbers = 0
+const colors = ['red', 'pink', 'blue']
+//const iteratedColors = colors.forEach() //recorre cada una de las pocisiones 
+const iteratedColors = colors.forEach(color => console.log(color))
 
-numbers.forEach(num => sumOfNumbers += num)
-
-console.log('Array of Numbers: ', numbers);
-console.log('The sum of the numbers is: ', sumOfNumbers);
+console.log(colors)
+console.log(iteratedColors)
