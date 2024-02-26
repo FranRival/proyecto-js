@@ -1,43 +1,22 @@
 
 //filter() y reduce()
-
-//filter crea un nuevo array con elementos que cumplen con una condicion dada por una funcion 
-
-const numeros = [1,2,34,54,10,29,91,73,32,8]
-const evenNumbers = numeros.filter(numbers => numbers % 2 === 0) //el filter pide una funcion dentro de los parentesis
+//Creamos la variable calificaciones las cuales les pasamos las calificaciones
+const calificaciones = [100, 90, 100, 80, 90, 80, 65, 28, 60, 45, 72, 55, 88, 40, 68, 75, 58, 95, 62, 50, 82, 35]
 
 
-//un modulo = % ---- 4|2
-
-console.log(numeros)
-console.log(evenNumbers)
+//creamos una variable calificaciones pasanates en la cual  de decimos que a calificaciones le haga un filatrado de mayor o igual que 70 
+const calificacionesPasantes  = calificaciones.filter(calificacion => calificacion >= 70)
 
 
-//reduce.
-//reduce un array a un solo valor. suma todos los valores obteniendo un solo valor. 
+//Creamos una variable para el promedio en la cual  le decimos que a calificaciones pasantes las sume toda y despues la divida por la longitud del array y así nos de el promedio 
+const promedioDeCalificaciones = calificacionesPasantes.reduce((sum, calificacion) => sum + calificacion, 0) / calificacionesPasantes.length;
 
 
-const numbersReduce = [1,2,3,4,5]
-const sumar = numbersReduce.reduce((accumulator, currentValue)=> accumulator + currentValue, 0)//agregar valor por dentro. 2 parametros. 
-
-console.log('Este es el array de numeros: ', numbersReduce)
-console.log(sumar)
-
-//encontrar cuanto se repite una palabra en un array. 
-
-//reduce . caso 2
+//Como el promedio nos muestra decumales pasamos un removedor de decimales 
+const promedioSinDecimales = Math.floor(promedioDeCalificaciones);
 
 
-const words = ['Apple', 'Banana', 'Barbie', 'Barbie', 'Apple']
-const reduceCaso2 = words.reduce((accumulator, currentValue)=> {
-  if (accumulator[currentValue]){
-    accumulator[currentValue]++
-  }else{
-    accumulator[currentValue] = 1
-
-  }
-  return accumulator
-}, {})
-
-console.log(reduceCaso2);
-
+///Imprimimos  las 3 variables principales
+console.log(calificaciones)
+console.log(calificacionesPasantes)
+console.log(promedioSinDecimales)
