@@ -1,17 +1,20 @@
 
-//calificacion promedio aprobatoria
+//find y findIndex. 
 
-//ejercicio
+//no modifican el array, ayudan a encontrar indices y elementos. 
 
-//promedio para aprobar
+//find: devuelve el primer elemento que cumple con una funcion. 
+const multipleOfFive = [5, 10, 15, 20]
+const firstNumberGreaterThan110 = multipleOfFive.find(number => number => 10)
 
-const grades = [85, 70, 83, 53, 24, 30, 29, 58, 60]
-const passigGrades = grades.filter(grade => grade >= 70)
+console.log(multipleOfFive) // el array no ha sido mutado. 
+console.log(firstNumberGreaterThan110)
 
-const averagePassingGrade = passigGrades.reduce((suma, grade) => suma + grade, 0) / passigGrades.length
 
-console.log('Original grades: ', grades)
-console.log('Passing grades: ', passigGrades)
-console.log('Average passing grades: ', averagePassingGrade)
+//find index: devuelve el primer elemento del array, que cumpla la condicion
 
-//otro programa que no understand. 
+const randomNumbers = [6, 14, 27, 56, 40]
+const indexOfRandomNumber = randomNumbers.findIndex(number => number > 50)
+
+console.log(randomNumbers)
+console.log(indexOfRandomNumber)
