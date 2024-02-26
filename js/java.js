@@ -29,3 +29,10 @@ function findWinnerByName (name){
   const winner = listaParticipantesGanadores.find(participants => participants.name === name)
   return winner || 'No hay un ganador.' //y este nueva linea alv?
 }
+
+function findWinnerIndexByTicket (ticketNumber){
+
+  const index = listaParticipantesGanadores.findIndex(participants => participants.ticketNumber === ticketNumber)
+
+  return index || "No hay ganador con ese ticket"
+}
