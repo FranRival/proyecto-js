@@ -36,3 +36,19 @@ function findWinnerIndexByTicket (ticketNumber){
 
   return index !== -1 ? index: "No hay ganador con ese ticket" //diferente menos uno, arroja el index. sino, nos arroja el otro valor. 
 }
+
+
+function displayWinnerInformation (Ganaodres){
+  if (Ganaodres !== undefined && Ganaodres != null && Ganaodres !== "No hay un ganador.") {
+    console.log("Winner informations: " + Ganaodres)
+  }else {
+    console.log('No se encontro ganandor ');
+  }
+}
+
+const ganandorPorNombre = findWinnerByName('Charly') //aqui hay un error. deberia aparecer la informacion. 
+const indexWinnerByTicket = findWinnerIndexByTicket(011)
+
+
+displayWinnerInformation(ganandorPorNombre)
+console.log('Index of winner by ticet number: ', indexWinnerByTicket);
