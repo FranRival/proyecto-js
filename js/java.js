@@ -34,5 +34,5 @@ function findWinnerIndexByTicket (ticketNumber){
 
   const index = listaParticipantesGanadores.findIndex(participants => participants.ticketNumber === ticketNumber)
 
-  return index || "No hay ganador con ese ticket"
+  return index !== -1 ? index: "No hay ganador con ese ticket" //diferente menos uno, arroja el index. sino, nos arroja el otro valor. 
 }
