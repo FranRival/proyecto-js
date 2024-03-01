@@ -26,7 +26,7 @@ const listaParticipantesGanadores = [
 
 function findWinnerByName (name){
   //hay que verificar si en esta lista de listaParticipantesGanadores, existe el nombre
-  const winner = listaParticipantesGanadores.find(participants => participants.name === name)
+  const winner = listaParticipantesGanadores.find(participants => participants.nombre === name)
   return winner || 'No hay un ganador.' //y este nueva linea alv?
 }
 
@@ -46,7 +46,7 @@ function displayWinnerInformation (Ganaodres){
   }
 }
 
-const ganandorPorNombre = findWinnerByName('Charly') //aqui hay un error. deberia aparecer la informacion. 
+const ganandorPorNombre = findWinnerByName('Emily') //aqui hay un error. deberia aparecer la informacion. 
 const indexWinnerByTicket = findWinnerIndexByTicket(011)
 
 
