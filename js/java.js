@@ -1,5 +1,5 @@
 
-//encontrar al ganador de una rifa 
+//encontrar al ganador de una rifa: el error persiste. y no lo he arreglado en 5 dias. uwu
 
 const listaParticipantesGanadores = [
   {
