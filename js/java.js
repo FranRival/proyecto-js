@@ -1,9 +1,4 @@
 
-//encontrar al ganador de una rifa: el error persiste. y no lo he arreglado en 5 dias. uwu
-
-
-
-//hay que encontrar el error alb
 
 const listaParticipantesGanadores = [
   {
@@ -29,9 +24,10 @@ const listaParticipantesGanadores = [
 ]
 
 function findWinnerByName (name){
-  //hay que verificar si en esta lista de listaParticipantesGanadores, existe el nombre
-  const winner = listaParticipantesGanadores.find(participants => participants.nombre === name)
-  return winner || 'No hay un ganador.' //y este nueva linea alv?
+
+  const winner = listaParticipantesGanadores.find(participants => participants.nombre === name) //el nombre del "participants.name" es igual al name que le estamos pasando por parametro....
+  //creo que la primero mierda de participants, es para que detecte que es una funcion 
+  return winner || 'No hay un ganador.' 
 }
 
 function findWinnerIndexByTicket (ticketNumber){
@@ -41,10 +37,10 @@ function findWinnerIndexByTicket (ticketNumber){
   return index !== -1 ? index: "No hay ganador con ese ticket" //diferente menos uno, arroja el index. sino, nos arroja el otro valor. 
 }
 
-
+//desplega la informacion. 
 function displayWinnerInformation (Ganaodres){
   if (Ganaodres !== undefined && Ganaodres != null && Ganaodres !== "No hay un ganador.") {
-    console.log("Winner informations: " + Ganaodres)
+    console.log("Winner informations: ", Ganaodres)
   }else {
     console.log('No se encontro ganandor ');
   }
