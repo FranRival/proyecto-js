@@ -27,7 +27,7 @@ function findWinnerByName (name){
 
   const winner = listaParticipantesGanadores.find(participants => participants.nombre === name) //el nombre del "participants.name" es igual al name que le estamos pasando por parametro....
   //creo que la primero mierda de participants, es para que detecte que es una funcion 
-  return winner || 'No hay un ganador.' 
+  return winner || 'No hay un ganad' 
 }
 
 function findWinnerIndexByTicket (ticketNumber){
@@ -47,7 +47,7 @@ function displayWinnerInformation (Ganaodres){
 }
 
 const ganandorPorNombre = findWinnerByName('Emily') //aqui hay un error. deberia aparecer la informacion. 
-const indexWinnerByTicket = findWinnerIndexByTicket(011)
+const indexWinnerByTicket = findWinnerIndexByTicket(015)
 
 
 displayWinnerInformation(ganandorPorNombre)
