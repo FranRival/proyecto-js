@@ -48,3 +48,10 @@ console.log('Largest transaction: ', largestTransaction)
 //y si no, devolver el vlor del acumulador. 
 
 //luego de las llaves, colocar el inicial value. este caso, seria el valor del array, en la pocision 0
+
+
+//3. filter purchase transaccion
+
+const purchaseTransaction = transaccions.filter(transaccions => transaccions.amount < 0)
+
+console.log(purchaseTransaction)
