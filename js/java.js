@@ -33,3 +33,18 @@ console.log('El total del saldo: ', totalBalance)
 
 
 //2. find the largest transacction (income or expense)
+
+
+const largestTransaction = transaccions.reduce((maxTransaction, transaction)=> {
+  return Math.abs(transaction.amount) > Math.abs(maxTransaction.amount) ? transaction : maxTransaction
+}, transaccions[0])
+
+console.log('Largest transaction: ', largestTransaction)
+
+
+//desde math.abs, valor absoluto del monto de la transaccion, 
+//esto es mayor, a esto mismo, 
+//vas a devolver el valor de la transaccion.
+//y si no, devolver el vlor del acumulador. 
+
+//luego de las llaves, colocar el inicial value. este caso, seria el valor del array, en la pocision 0
