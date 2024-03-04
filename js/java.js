@@ -1,6 +1,10 @@
 
 //encontrar al ganador de una rifa 
 
+
+
+//hay que encontrar el error alb
+
 const listaParticipantesGanadores = [
   {
     id: 1,
@@ -15,7 +19,7 @@ const listaParticipantesGanadores = [
   {
     id: 3,
     nombre: 'Emily',
-    ticketNumber: 011,
+    ticketNumber: 011, 
   },
   {
     id: 4,
