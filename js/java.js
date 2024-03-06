@@ -77,8 +77,8 @@ console.log(indexTransactionWithAmounth)
 //encuentra la transaccion y el numero de su indice. en este caso, es el puesto 3. 
 
 //6. actualizar las descripciones de una compra.
-transaccions.forEach(transactions => {
-  if (transactions.amount > -30){
+transaccions.forEach(transaccions => {
+  if (transaccions.amount < 0){
     transaccions.description = `Expense: ${transaccions.description}`
 
   }else {
