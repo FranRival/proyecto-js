@@ -55,3 +55,15 @@ console.log('Largest transaction: ', largestTransaction)
 const purchaseTransaction = transaccions.filter(transaccions => transaccions.amount < 0)
 
 console.log(purchaseTransaction)
+
+//aqui se utiliza ya el array. ahi:... filter(transaccions =>.... aqui ya se esta utilizando. 
+
+
+//4. encuentra una transaccion en especifico por su descripcion
+
+
+const specificTransaction = transaccions.find(transaccions => transaccions.description === 'Online Purchase')//ese valor de transaccions, debe ser del array. ????????
+
+console.log('La transaccion especifica es:' , specificTransaction)
+
+//5. 
