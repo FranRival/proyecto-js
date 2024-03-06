@@ -66,4 +66,12 @@ const specificTransaction = transaccions.find(transaccions => transaccions.descr
 
 console.log('La transaccion especifica es:' , specificTransaction)
 
-//5. 
+
+
+//5. encontrar el index de una transaccion por cantidad
+
+const indexTransactionWithAmounth = transaccions.findIndex(transaccions => transaccions.amount === -30)
+
+console.log(indexTransactionWithAmounth)
+
+//encuentra la transaccion y el numero de su indice. en este caso, es el puesto 3. 
