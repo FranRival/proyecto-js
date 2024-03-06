@@ -29,3 +29,9 @@ function combineMorseMessages (morseCode1, morseCode2){
 
 combineMorseMessages(morseCOde1,morseCOde2)
 console.log();
+
+
+const numbers = [1, 2, 3]
+const string = 'String'
+
+combineMorseMessages(numbers,string) //separados. siendo parte del array
