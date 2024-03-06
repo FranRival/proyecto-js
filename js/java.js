@@ -18,3 +18,14 @@ console.log(morseCodeMessage)
 const morseCodeMessage1 = [].concat(morseCOde1, morseCOde2)//array vacio
 
 console.log(morseCodeMessage1);
+
+
+//spread operatior, con 3 puntos
+
+function combineMorseMessages (morseCode1, morseCode2){
+ console.log('Esta es la funcion de combinar mensaje',[...morseCode1, ...morseCode2])
+
+}//se combinara el array. 
+
+combineMorseMessages(morseCOde1,morseCOde2)
+console.log();
