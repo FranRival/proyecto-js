@@ -35,3 +35,10 @@ const numbers = [1, 2, 3]
 const string = 'String'
 
 combineMorseMessages(numbers,string) //separados. siendo parte del array
+
+
+//JOIN. junta todos los datos, y devuelve un solo valor. 
+
+const morseCodeMessaString = morseCodeMessage1.join(' # ')
+
+console.log('Utilizando Join: ', morseCodeMessaString);
