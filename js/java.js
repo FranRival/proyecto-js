@@ -1,18 +1,10 @@
 
-//every y some
-const edades = [21, 25, 30, 19, 22, 31]
+//includes
+//indexof
+//lastindexof
 
-//every
+const numeros = [1, 2, 3, 4, 5]
 
-const todosSonAdultos = edades.every( edades => edades > 18) //pide como parametro una funcion
-
-console.log(edades)
-console.log(todosSonAdultos) //devuelve un true
-
-
-//some
-
-const alMenosUnoEnTreinta = edades.some(edades => edades > 30)
-
-console.log(edades)
-console.log(alMenosUnoEnTreinta)
+const resultado1 = numeros.includes(3)
+console.log(resultado1) 
+//hay un numero que tenga este del parentesis. resultado, true o false. 
