@@ -13,7 +13,7 @@ function encuentraIndicesEnElArray (array, objetivo){
         fistOcurrenciaIndex: -1,
         lastOcurrenciaIndex: -1,
     }
-    array.forEach(element, index=>{
+    array.forEach((element, index)=>{
         if (element.includes(objetivo)) {
             result.includesTargetString = true
             result.fistOcurrenciaIndex = array.indexOf(objetivo)
