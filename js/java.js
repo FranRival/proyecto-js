@@ -1,41 +1,52 @@
 
-//spread operator
-const originalArray = [1,2,3,4,5]
+//arrays bidimensionales - 66
 
-const copiaDelArray = [...originalArray]
+let array1D = [1,2,3] //unidimensional.
+let array2D = [[1,2,3], [4,5,6], [7,8,9]] //bidimensionale
 
-console.log(originalArray)
-console.log(copiaDelArray)
+let matrix = [
+    [1,2,3], 
+    [4,5,6], 
+    [7,8,9]
+]
 
-//esto se utiliza para no modificar el array, y trabajar en ese mismo array.
-//spread para combinar array.
+matrix[1][2] = 10
+console.log(matrix)
 
-//2. 
+let valor = matrix[0][1]
+console.log(valor)
 
-const array1 = [1,2,3,4,5]
-const array2 = [6,7,8,9,10]
-const arrayCombinado = [...array1, ...array2]
+//operaciones comunes con arrays bidimensionales.
 
-console.log(array1)
-console.log(array2)
-console.log(arrayCombinado)
-
-//3. crear array con elementos adicionales. 
-
-const arrayBase = [1,2,3]
-const arrayConAdicionales = [...arrayBase, 4, 5, 6]
-
-console.log(arrayBase)
-console.log(arrayConAdicionales)
-
-//4. parametros a una funcion. 
-
-function sumar (a, b, c){
-    return a + b + c
+for (let i = 0; i < matrix.length; i++) {//filas
+    for (let j = 0; i < matrix[i].length; j++){//columnas.
+        console.log(matrix[i][j])
+    }
 }
 
-const numeros = [1, 2, 3]
-const resultados = sumar(...numeros)
+function encontrarElemento (matrix, elemento){
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; i < matrix[i].length; j++){
+            if (matrix[i][j] === elemento) {
+                return true   
+            }
+        }
+    }
+    return false
+}
 
-console.log(resultados)
+ 
+console.log(encontrarElemento(matrix, 5))
+
+
+function matrixDuplicada (matrix){
+    let newMatrix = []
+    for (let i = 0; i < matrix.length; i++) {
+        newMatrix[i] = [...matrix[i]]
+    }
+    return newMatrix
+}
+
+console.log(matrixDuplicada (matrix));
+
 
