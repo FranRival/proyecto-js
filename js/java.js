@@ -1,28 +1,12 @@
 
-//includes
-//indexof
-//lastindexof
+//crear copias con slices
+//cuando solo necesitamos una porsion del array.
 
-const stringArray = ['manzanas', 'platanos', 'naranjas', 'uvas', 'platanos', 'kiwi']
+const animales = ['pollos', 'hormigas', 'hipopotamo', 'zarigueya', 'bisonte']
 
-const objetivo = 'platanos'
-
-function encuentraIndicesEnElArray (array, objetivo){
-    const result = {
-        includesTargetString: false,
-        fistOcurrenciaIndex: -1,
-        lastOcurrenciaIndex: -1,
-    }
-    array.forEach((element, index)=>{
-        if (element.includes(objetivo)) {
-            result.includesTargetString = true
-            result.fistOcurrenciaIndex = array.indexOf(objetivo)
-            result.lastOcurrenciaIndex = array.lastIndexOf(objetivo)
-        }
-    })
-    return result
-}
-
-const resultado = encuentraIndicesEnElArray (stringArray, objetivo)
-
-console.log(resultado)
+console.log(animales.slice(2))
+console.log(animales.slice(2, 4))
+console.log(animales.slice(1, 5))
+console.log(animales.slice(-2))
+console.log(animales.slice(2, -1))
+console.log(animales.slice);
