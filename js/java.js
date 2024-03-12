@@ -1,56 +1,25 @@
 
-//arrays bidimensionales - 66
+//arrays bidimensionales - 67
 
-let array1D = [1,2,3] //unidimensional.
-let array2D = [[1,2,3], [4,5,6], [7,8,9]] //bidimensionale
+//el ganador del torneo. 
 
-let matrix = [
-    [1,2,3], 
-    [4,5,6], 
-    [7,8,9]
+const competidores = [
+    ['Java', 'C#'],
+    ['C#', 'Python'],
+    ['Python', 'Java']
 ]
 
-matrix[1][2] = 10
-console.log(matrix)
+const resultados = [0,0,1]
 
-let valor = matrix[0][1]
-console.log(valor)
 
-//operaciones comunes con arrays bidimensionales.
+function ganadorTorneo (competidores, resultados){
+    for (let i = 0; i < competidores.length; i++) {
+     //   const home = competidores[i][0]
+        const [home, away] = competidores[i]//creando 2 variables. en la primera pocsion, se toma home, y la segunda away     
+        //home y way signifca, equipo del pueblo , y equipo extrangero alv
 
-for (let i = 0; i < matrix.length; i++) {//filas
-    for (let j = 0; j < matrix[i].length; j++){//columnas.
-        console.log(matrix[i][j])
+        const equipoGanador = resultados[i] === 0 ? away : home
     }
-} 
-
-
-
-
-
-function encontrarElemento (matrix, elemento){
-    for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++){
-            if (matrix[i][j] === elemento) {
-                return true   
-            }
-        }
-    }
-    return false
 }
 
- 
-console.log(encontrarElemento(matrix, 5))
-
-
-function matrixDuplicada (matrix){
-    let newMatrix = []
-    for (let i = 0; i < matrix.length; i++) {
-        newMatrix[i] = [...matrix[i]]
-    }
-    return newMatrix
-}
-
-console.log(matrixDuplicada (matrix));
-
-
+ganadorTorneo (competidores, resultados)
