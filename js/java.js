@@ -19,14 +19,18 @@ console.log(valor)
 //operaciones comunes con arrays bidimensionales.
 
 for (let i = 0; i < matrix.length; i++) {//filas
-    for (let j = 0; i < matrix[i].length; j++){//columnas.
+    for (let j = 0; j < matrix[i].length; j++){//columnas.
         console.log(matrix[i][j])
     }
-}
+} 
+
+
+
+
 
 function encontrarElemento (matrix, elemento){
     for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; i < matrix[i].length; j++){
+        for (let j = 0; j < matrix[i].length; j++){
             if (matrix[i][j] === elemento) {
                 return true   
             }
