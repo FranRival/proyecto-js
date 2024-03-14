@@ -44,3 +44,19 @@ const personaMetodos = {
 }
 
 console.log(personaMetodos.saludar())//mi logica me dijo this shit.
+
+
+//trabajando con objetos. consumo de objetos. 
+
+console.log(personaMetodos.nombre)
+
+
+//para agregar un dato sin afectar al array.
+
+personaMetodos.telefono = '555-555-555' //propiedad
+console.log(personaMetodos)
+
+personaMetodos.despedir = () => { //metodo.
+    console.log('Adios.')
+}
+console.log(personaMetodos.despedir())
