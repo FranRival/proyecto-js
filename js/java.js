@@ -28,7 +28,7 @@ function ganadorTorneo (competidores, resultados){
 
    
         if (!ganadores || calificaciones[equipoGanador] > calificaciones[ganadores]) {
-            ganadores = equipoGanador
+            ganadores = equipoGanador 
         }
     }
     return ganadores
