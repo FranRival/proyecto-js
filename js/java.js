@@ -24,3 +24,23 @@ const persona = {
         ciudad: 'Mexico'
     }
 }
+
+
+//METODOS: funciones adentro de objetos, que ayudan a generar interaccion.
+
+
+const personaMetodos = {
+    nombre: 'Ariela',
+    edad: 1,
+    genero: 'M',
+    direccion: {
+        calle: 'AV. insurg. 187.',
+        ciudad: 'Mexico'
+    },
+
+    saludar (){ //construccion de metodo.
+        console.log(`Hello, my nombre es ${personaMetodos.nombre}`)
+    }
+}
+
+console.log(personaMetodos.saludar())//mi logica me dijo this shit.
