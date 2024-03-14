@@ -60,3 +60,11 @@ personaMetodos.despedir = () => { //metodo.
     console.log('Adios.')
 }
 console.log(personaMetodos.despedir())
+
+
+//ingresar a un objeto que tiene un pequeno objeto.
+//personaMetodos > direccion > calle
+
+console.log(personaMetodos.direccion.calle)//objetos anidados. 
+
+delete personaMetodos.telefono //eliminar. 
