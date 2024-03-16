@@ -1,70 +1,25 @@
 
 //objetos. 
-//estructura de datos. 
-//key / value. 
-//propiedad = valor de la propiedad. 
+//
 
-/* 
-objeto NOMBRE {
-    propiedad: valor de la propiedad,
-    propiedad: otro valor, 
-    propiedad: mas valores,
-} 
-*/
-
-//abstraer la informacion. para llevarlas a la programacion. 
-
-
-const persona = {
-    nombre: '',
-    edad: 1,
-    genero: 'M',
-    direccion: {
-        calle: 'AV. insurg. 187.',
-        ciudad: 'Mexico'
-    }
+let perspna = {
+    nombre: 'Emily',
+    apellido: 'Lujuriosa',
+    edad: 35
 }
 
 
-//METODOS: funciones adentro de objetos, que ayudan a generar interaccion.
+//creando 150 personas. 
+//funcion constructora.
 
-
-const personaMetodos = {
-    nombre: 'Ariela',
-    edad: 1,
-    genero: 'M',
-    direccion: {
-        calle: 'AV. insurg. 187.',
-        ciudad: 'Mexico'
-    },
-
-    saludar (){ //construccion de metodo.
-        console.log(`Hello, my nombre es ${personaMetodos.nombre}`)
-    }
+function nombre_dela_funcion_constructora_de_objeto (nombre, apellido,edad){
+    this.nombre = nombre
+    this.apellido = apellido
+    this.edad = edad
 }
 
-console.log(personaMetodos.saludar())//mi logica me dijo this shit.
+const persona1 = new nombre_dela_funcion_constructora_de_objeto('Alison', 'Rios', 25)
 
+console.log(persona1)
 
-//trabajando con objetos. consumo de objetos. 
-
-console.log(personaMetodos.nombre)
-
-
-//para agregar un dato sin afectar al array.
-
-personaMetodos.telefono = '555-555-555' //propiedad
-console.log(personaMetodos)
-
-personaMetodos.despedir = () => { //metodo.
-    console.log('Adios.')
-}
-console.log(personaMetodos.despedir())
-
-
-//ingresar a un objeto que tiene un pequeno objeto.
-//personaMetodos > direccion > calle
-
-console.log(personaMetodos.direccion.calle)//objetos anidados. 
-
-delete personaMetodos.telefono //eliminar. 
+persona1.nacionalidad = 'huasteco' //darle una nueva propiedad
