@@ -16,3 +16,6 @@ class Persona {
     }
 }//esto es un molde.
 
+const persona1 = new Persona('Yanira', 24)
+
+persona1.saludar()
