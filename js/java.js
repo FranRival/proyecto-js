@@ -29,4 +29,11 @@ class perro extends Animal{
     }
 }
 
-//moldes sin informacion.
+
+const perro1 = new perro('Alexa', 'Perro', 'Siberiano')
+
+console.log(perro1)
+
+perro1.correr()
+perro1.emitirSonido()
+//estamos rescribiendo el metodo de emitirSOnido(). por eso no aparece el emitirSonido de la clase animal.
