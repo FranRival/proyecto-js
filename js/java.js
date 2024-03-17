@@ -46,6 +46,16 @@ perro1.nuevoMetodo = function(){
 
 //hay que inyectar la infroamcion sin afectar la clase perro.
 
+
+
 perro1.prototype.segundoMetodo = function (){
     console.log('Es otro nuevo metodo');
-}
+}//estamos agregando un nuevo metodo > al prototipo de una instancia. 
+//solo se crea con las clases o funciones constructoras. 
+
+//perro1.prototype - no existe
+//perro.prototype - existe.
+
+perro.prototype.segundoMetodo = function (){
+    console.log('Es otro nuevo metodo');
+} 
