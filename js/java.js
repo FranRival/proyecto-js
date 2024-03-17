@@ -1,21 +1,25 @@
 
-//clases.
+//prototipos y herencias.
 
-//crear nuevos objetos.
+//prototype. mismos metodos y rpopiedades. es algo que sucede automaticamente sin necesidad de programar.
 
-class Persona {
-    //metodo constructor.
-    constructor(nombre, edad){
+//funciona con funciones y clases. pero no las instancias. 
+
+class Animal {
+    constructor(nombre,tipos){
         this.nombre = nombre
-        this.edad = edad
+        this.tipos = tipos
     }
-
     //metodo
-    saludar(){
-        console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} edad`)
+    emitirSonido(){
+        console.log('El animal emite un sonido. ')
     }
-}//esto es un molde.
+}
 
-const persona1 = new Persona('Yanira', 24)
-
-persona1.saludar()
+class perro extends Animal{
+    constructor(nombre,tipo,raza){
+        this.nombre = nombre
+        this.tipo = tipo
+    }
+}//esta clase utilizara de base la clase animal. 
+//es la palabra extends. 
