@@ -36,4 +36,16 @@ console.log(perro1)
 
 perro1.correr()
 perro1.emitirSonido()
-//estamos rescribiendo el metodo de emitirSOnido(). por eso no aparece el emitirSonido de la clase animal.
+
+
+perro1.nuevoMetodo = function(){
+    console.log("Este es un metodo")
+}//esta linea de codigo estamos agregando un nuevo metodo solo a la instancia. 
+//necesitamos agregar ese metodo a la clase constructora o la clase padre (perro)
+
+
+//hay que inyectar la infroamcion sin afectar la clase perro.
+
+perro1.prototype.segundoMetodo = function (){
+    console.log('Es otro nuevo metodo');
+}
