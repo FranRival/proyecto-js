@@ -18,8 +18,9 @@ class Animal {
 
 class perro extends Animal{
     constructor(nombre,tipo,raza){
-        this.nombre = nombre
-        this.tipo = tipo
+        super(nombre, tipo) //super llama al constructor de la clase animal
+        this.raza = raza
     }
 }//esta clase utilizara de base la clase animal. 
 //es la palabra extends. 
+//palabra super. 
