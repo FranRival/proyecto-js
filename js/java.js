@@ -60,3 +60,12 @@ perro.prototype.segundoMetodo = function (){
 perro1.prototype.segundoMetodo = function(){
     console.log()
 }//no funciona. 
+//agrgando un prootupo a una instancia. pero solo se crea con las clases y funciones constructoras. 
+
+//gerarquia:
+
+//cadena de prototypo:
+
+//perro analiza el "SegundoMetodo"
+//y se da cuenta que no lo tiene en su constructor. 
+//pero si lo tiene en su prototipo. por lo tanto se puede acceder a ello.
