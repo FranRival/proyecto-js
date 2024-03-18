@@ -69,3 +69,11 @@ perro1.prototype.segundoMetodo = function(){
 //perro analiza el "SegundoMetodo"
 //y se da cuenta que no lo tiene en su constructor. 
 //pero si lo tiene en su prototipo. por lo tanto se puede acceder a ello.
+
+
+
+//--el prototypo actual. 
+let currentPrototype = Object.getPrototypeOf(bast);
+  for (;currentPrototype !== null; currentPrototype = Object.getPrototypeOf(currentPrototype)) {
+    console.log(currentPrototype);
+  }
