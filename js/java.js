@@ -48,14 +48,15 @@ perro1.nuevoMetodo = function(){
 
 
 
-perro1.prototype.segundoMetodo = function (){
-    console.log('Es otro nuevo metodo');
-}//estamos agregando un nuevo metodo > al prototipo de una instancia. 
-//solo se crea con las clases o funciones constructoras. 
-
-//perro1.prototype - no existe
-//perro.prototype - existe.
-
 perro.prototype.segundoMetodo = function (){
     console.log('Es otro nuevo metodo');
 } 
+
+
+///lo que son las estancias a la dickenson:
+//perro1.prototype es indefinido.
+//perro.prototype
+
+perro1.prototype.segundoMetodo = function(){
+    console.log()
+}//no funciona. 
