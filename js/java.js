@@ -73,7 +73,10 @@ perro1.prototype.segundoMetodo = function(){
 
 
 //--el prototypo actual. 
-let currentPrototype = Object.getPrototypeOf(bast);
+let currentPrototype = Object.getPrototypeOf(perro1);//al objeto global, dame le prototipo de perro 1.
+//perro1 no tiene una isntancia porque no tiene.
+//cual es el prototipo del padre. 
   for (;currentPrototype !== null; currentPrototype = Object.getPrototypeOf(currentPrototype)) {
     console.log(currentPrototype);
   }
+
