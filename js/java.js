@@ -54,14 +54,10 @@ const pass = prompt('Cual es tu contrasena?')
 function verificacion (username, password){
     for (let i = 0; i < usersDatabase.length; i++) {
         if (usersDatabase[i].username === username && usersDatabase[i].password === password) {
-
             return true
-            break;
-        }else {
-
-            return false
         }
     }
+    return false
 }
   
 
