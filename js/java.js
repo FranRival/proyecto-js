@@ -11,15 +11,15 @@ Requerimientos del reto:
 const usersDatabase = [
     {
         username: 'Diego',
-        password: '123', 
+        password: '123',
     },
     {
-        username: 'Juan',
-        password: '123'
+        username: 'Perico',
+        password: '123' 
     },
     {
-        username: 'Pedro',
-        password: '123'
+        username: 'Pedro', 
+        password: '123' 
     } 
 ]
  
@@ -53,17 +53,30 @@ const pass = prompt('Cual es tu contrasena?')
 
 function verificacion (username, password){
     for (let i = 0; i < usersDatabase.length; i++) {
-        if (usersDatabase[i].username === username && usersDatabase[i].password === password) {//entiendo ahora si this shit. 
-            console.log('Puedes pasar')
-            break
+        if (usersDatabase[i].username === username && usersDatabase[i].password === password) {
+
+            return true
+            break;
         }else {
-            console.log('No existes alv')
-            break
-        } 
+
+            return false
+        }
     }
 }
- 
+  
 
-verificacion(username,pass)
 
-//el progrma no funciona con Juan?
+
+function singIn(username,pass){
+    if (verificacion(username,pass)) {
+        alert(`Bienvenido a tu cuenta ${username}`)
+        console.log(usersTimeline)
+        
+    }else{
+        alert('Error hijoputa')
+    }
+}
+
+
+singIn(username,pass)
+
