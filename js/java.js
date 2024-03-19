@@ -48,4 +48,18 @@ const usersTimeline = [
 const username = prompt('CUal es tu usuario?')
 const pass = prompt('Cual es tu contrasena?')
 
- 
+//hacer un loop. el prompt es el mismo dato que estan en los arrays,
+//algo es igual a algo. 
+
+function verificacion (username, password){
+
+    for (let i = 0; i < usersDatabase.length; i++) {
+
+        if (condition) {
+            
+        }
+        
+    }
+}
+
+//para preguntarle al navegador: usersDatabase[0].nombre/password.
