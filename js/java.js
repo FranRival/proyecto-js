@@ -22,7 +22,7 @@ const usersDatabase = [
         password: '123'
     } 
 ]
-
+ 
 
 const usersTimeline = [
     {
@@ -52,9 +52,7 @@ const pass = prompt('Cual es tu contrasena?')
 //algo es igual a algo. 
 
 function verificacion (username, password){
-
     for (let i = 0; i < usersDatabase.length; i++) {
-
         if (usersDatabase[i].username === username && usersDatabase[i].password === password) {//entiendo ahora si this shit. 
             console.log('Puedes pasar')
             break
@@ -64,6 +62,8 @@ function verificacion (username, password){
         } 
     }
 }
-
+ 
 
 verificacion(username,pass)
+
+//el progrma no funciona con Juan?
