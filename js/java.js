@@ -11,7 +11,7 @@ Requerimientos del reto:
 const usersDatabase = [
     {
         username: 'Diego',
-        password: '123',
+        password: '123', 
     },
     {
         username: 'Juan',
@@ -20,7 +20,7 @@ const usersDatabase = [
     {
         username: 'Pedro',
         password: '123'
-    }
+    } 
 ]
 
 
@@ -55,11 +55,15 @@ function verificacion (username, password){
 
     for (let i = 0; i < usersDatabase.length; i++) {
 
-        if (condition) {
-            
-        }
-        
+        if (usersDatabase[i].username === username && usersDatabase[i].password === password) {//entiendo ahora si this shit. 
+            console.log('Puedes pasar')
+            break
+        }else {
+            console.log('No existes alv')
+            break
+        } 
     }
 }
 
-//para preguntarle al navegador: usersDatabase[0].nombre/password.
+
+verificacion(username,pass)
