@@ -77,3 +77,7 @@ function singIn(username,pass){
 singIn(username,pass)
 
 //hay un error. en el for de verificacion, verifica si el primer elemento del array esta correcto. pero si los datos estan en el segundo + nivel, entonces se rompera. aunque los datos esten cprrectos alv
+
+
+//proyecto JS tiene todas las bases fundamentales. 
+//programacion-orientada-objetos-javascript es la que tiene los metodos de writtable, configurable,
